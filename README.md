@@ -6,14 +6,15 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue" />
+  <img src="https://img.shields.io/badge/Total%20Lines-11479-purple" />
   <img src="https://img.shields.io/badge/AsyncIO-Enabled-success" />
   <img src="https://img.shields.io/badge/discord.py-2.x-blueviolet" />
-  <img src="https://img.shields.io/badge/Flask-API-lightgrey" />
-  <img src="https://img.shields.io/badge/Architecture-Cog--Based-informational" />
-  <img src="https://img.shields.io/badge/Commands-Slash%20Commands-orange" />
-  <img src="https://img.shields.io/badge/Hosting-Heroku%20%7C%20Render%20%7C%20Railway-9cf" />
-  <img src="https://img.shields.io/badge/Process-Long--Running-important" />
-  <img src="https://img.shields.io/badge/Concurrency-Threaded%20%2B%20Async-brightgreen" />
+  <img src="https://img.shields.io/badge/Flask-API-gold" />
+  <img src="https://img.shields.io/badge/Architecture-Cog--Based-maroon" />
+  <img src="https://img.shields.io/badge/Commands-Slash%20Commands-teal" />
+  <img src="https://img.shields.io/badge/Hosting-Heroku%20%7C%20Render%20%7C%20Railway-cyan" />
+  <img src="https://img.shields.io/badge/Process-Long--Running-magenta" />
+  <img src="https://img.shields.io/badge/Concurrency-Threaded%20%2B%20Async-orange" />
   <img src="https://img.shields.io/badge/Maintenance-Actively%20Developed-success" />
 </p>
 
