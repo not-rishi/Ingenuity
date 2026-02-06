@@ -106,9 +106,9 @@ Delivers a polished onboarding experience with automated welcome DMs and persona
 
 #### Preview
 <p align="center">
-  <img src="Assets/ReadMe/WelcomePage.png" alt="error" width="600">
-  <img src="Assets/ReadMe/WelcomePage3.png" alt="error" width="400">
-  <img src="Assets/ReadMe/WelcomePage2.png" alt="error" width="400">
+  <img src="Assets/ReadMe/WelcomePage.png" alt="error" width="500">
+  <img src="Assets/ReadMe/WelcomePage3.png" alt="error" width="300">
+  <img src="Assets/ReadMe/WelcomePage2.png" alt="error" width="300">
 </p>
 
 ---
@@ -218,10 +218,10 @@ Centralizes server insights, user help, and real-time bot diagnostics with autom
 
 #### Preview
 <p align="center">
-  <img src="Assets/ReadMe/help.png" alt="error" width="400">
-  <img src="Assets/ReadMe/ping1.png" alt="error" width="400">
-  <img src="Assets/ReadMe/overview.png" alt="error" width="400">
-  <img src="Assets/ReadMe/statusreport1.png" alt="error" width="400">
+  <img src="Assets/ReadMe/help.png" alt="error" width="300">
+  <img src="Assets/ReadMe/ping1.png" alt="error" width="300">
+  <img src="Assets/ReadMe/overview.png" alt="error" width="300">
+  <img src="Assets/ReadMe/statusreport1.png" alt="error" width="300">
 </p>
 
 ---
