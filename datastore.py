@@ -16,7 +16,28 @@ exception_channels = []  # List of channel IDs where messages won't be deleted
 cache_autodelete_userlog = [] #List to store temparory IDs to prevent over DMing
 
 # Enabled Cogs
-cogs_extensions = ['cogs.mute', 'cogs.dm_delete', 'cogs.ping','cogs.join_message', 'cogs.verify','cogs.announce','cogs.snipe','cogs.routine_check','cogs.refresh_token','cogs.dailylog','cogs.overview','cogs.button_role','cogs.websearch','cogs.infohelp','cogs.aireply','cogs.ranking','cogs.faculty','cogs.redditposter','cogs.pilwelcome','cogs.raid']
+cogs_extensions = COGS = [
+    "ai-replies",
+    "announce",
+    "click-roles",
+    "daily-logs",
+    "dmAll-delete",
+    "faculty-fetch",
+    "get-help-info",
+    "get-overview",
+    "join-dm",
+    "mute",
+    "ping",
+    "raid",
+    "reddit-sync",
+    "routine-check",
+    "server-join-rank",
+    "snipe",
+    "update-refresh-token",
+    "verify",
+    "websearch",
+    "welcome-banner"
+]
 
 # Email Verification 
 CLIENT_ID = 
