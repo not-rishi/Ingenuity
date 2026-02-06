@@ -5,23 +5,14 @@
 <h1 align="center">Ingenuity</h1>
 
 <p align="center">
-  <!-- Language & Runtime -->
   <img src="https://img.shields.io/badge/Python-3.10+-blue" />
   <img src="https://img.shields.io/badge/AsyncIO-Enabled-success" />
-
-  <!-- Core Libraries -->
   <img src="https://img.shields.io/badge/discord.py-2.x-blueviolet" />
   <img src="https://img.shields.io/badge/Flask-API-lightgrey" />
-
-  <!-- Architecture -->
   <img src="https://img.shields.io/badge/Architecture-Cog--Based-informational" />
   <img src="https://img.shields.io/badge/Commands-Slash%20Commands-orange" />
-
-  <!-- Deployment -->
   <img src="https://img.shields.io/badge/Hosting-Heroku%20%7C%20Render%20%7C%20Railway-9cf" />
   <img src="https://img.shields.io/badge/Process-Long--Running-important" />
-
-  <!-- Quality & Usage -->
   <img src="https://img.shields.io/badge/Concurrency-Threaded%20%2B%20Async-brightgreen" />
   <img src="https://img.shields.io/badge/Maintenance-Actively%20Developed-success" />
 </p>
@@ -34,12 +25,12 @@
 
 ---
 
-## Repository Structure
+## ▸ Repository Structure
 
 ```
 
 ```
-## Functions 
+## ▸ Functions 
 
 ### ✦ Faculty Search
 Gets fresh data from the college website and displays the faulty details in a clean embed. 
@@ -242,7 +233,8 @@ Provides essential moderation tools including timed muting, mass announcement pu
 
 ---
 
-## Tech Stack
+## ▸ Tech Stack
+```
 - Python 3.10+
 - discord.py (app_commands)
 - AsyncIO
@@ -253,8 +245,9 @@ Provides essential moderation tools including timed muting, mass announcement pu
 - aiohttp / requests
 - psutil (system metrics)
 - BeautifulSoup4 (web scraping)
+```
 
-## Setup
+## ▸ Setup
 
 ### Prerequisites
 - Python 3.10 or higher
@@ -263,93 +256,91 @@ Provides essential moderation tools including timed muting, mass announcement pu
 
 ### Installation
 1. Clone the repository  
-2. (Optional) Create and activate a virtual environment  
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
 
-4. Configure environment variables and datastore values
+3. Configure environment variables and datastore values
 
-Run the bot:
+4. Run the bot:
    ```bash
    python app.py
    ```
-
 ---
 
-## Configuration
+## ▸ Configuration
 
 All configuration is managed via `datastore.py`.  
 Ensure all required values are set before running the bot.
+```
+Core Bot Settings
+- BOT_TOKEN                — Discord bot token
+- YOUR_GUILD_ID            — Primary server (guild) ID
+- BOT_COMMANDS_ID          — Channel ID where bot commands are allowed
 
-#### Core Bot Settings
-- `BOT_TOKEN` — Discord bot token  
-- `YOUR_GUILD_ID` — Primary server (guild) ID  
-- `BOT_COMMANDS_ID` — Channel ID where bot commands are allowed  
+Role & Permission Settings
+- ANNOUNCEMENT_PERMISSION        — Roles allowed to send announcements
+- ALLOWED_ROLES_ADMINISTRATIVE   — Roles allowed to run moderation commands
+- BOT_ADMINISTRATIVE             — Roles with full administrative access
+- MUTE_ROLE_NAME                 — Role applied when a member is muted
 
-#### Role & Permission Settings
-- `ANNOUNCEMENT_PERMISSION` — Roles allowed to send announcements  
-- `ALLOWED_ROLES_ADMINISTRATIVE` — Roles allowed to run moderation commands  
-- `BOT_ADMINISTRATIVE` — Roles with full administrative access  
-- `MUTE_ROLE_NAME` — Role applied when a member is muted  
+Logging
+- LOG_CHANNEL_NAME         — Channel used for server logs and audit reports
 
-#### Logging
-- `LOG_CHANNEL_NAME` — Channel used for server logs and audit reports  
+Auto-Delete & Message Control
+- auto_delete_enabled     — Enable or disable automatic message deletion
+- blacklisted_roles       — Roles whose messages are automatically deleted
+- exception_channels      — Channel IDs excluded from auto-deletion
+- cache_autodelete_userlog — Internal cache to prevent repeated DM notifications
 
-#### Auto-Delete & Message Control
-- `auto_delete_enabled` — Enable or disable automatic message deletion  
-- `blacklisted_roles` — Roles whose messages are automatically deleted  
-- `exception_channels` — Channel IDs excluded from auto-deletion  
-- `cache_autodelete_userlog` — Internal cache to prevent repeated DM notifications  
-
-#### Enabled Cogs
+Enabled Cogs
 Controls which modules are loaded on startup.
 
-- `cogs_extensions` — List of enabled bot cogs  
+- cogs_extensions         — List of enabled bot cogs
 
-#### Email Verification (Gmail API)
-- `CLIENT_ID`
-- `CLIENT_SECRET`
-- `REFRESH_TOKEN`
-- `TOKEN_URI`
-- `SCOPES`
-- `COMMAND_ACCEPTED_REFRESH_TOKEN`
+Email Verification (Gmail API)
+- CLIENT_ID
+- CLIENT_SECRET
+- REFRESH_TOKEN
+- TOKEN_URI
+- SCOPES
+- COMMAND_ACCEPTED_REFRESH_TOKEN
 
-#### Web Search
-- `GOOGLE_WEB_SEARCH_API_KEY`
-- `CUSTOM_SEARCH_ENGINE_KEY`
+Web Search
+- GOOGLE_WEB_SEARCH_API_KEY
+- CUSTOM_SEARCH_ENGINE_KEY
 
-#### UI & Loading Assets
-- `ping_loading_gif`
-- `email_sending_gif`
-- `email_sent_gif`
-- `joining_gif`
-- `logo_rotating`
-- `routine_check_gif`
-- `genral_loading_gif`
-- `anime_loading`
-- `alternate_loading_gif`
+UI & Loading Assets
+- ping_loading_gif
+- email_sending_gif
+- email_sent_gif
+- joining_gif
+- logo_rotating
+- routine_check_gif
+- genral_loading_gif
+- anime_loading
+- alternate_loading_gif
 
-#### Join Message System
-- `JOIN_MESSAGE_MODE` — `default`, `custom`, or `disabled`  
-- `CUSTOM_JOIN_MESSAGE`
+Join Message System
+- JOIN_MESSAGE_MODE  — default | custom | disabled
+- CUSTOM_JOIN_MESSAGE
 
-#### AI Reply System
-- `PERSONA`
-- `reply_model` — `gemini`, `mistral`, or `disabled`  
-- `GEMINI_API_KEY`
-- `MISTRAL_API_URL`
-- `MISTRAL_API_KEY`
-- `ai_restricted_channel`
-- `ai_restricted_role`
+AI Reply System
+- PERSONA
+- reply_model  — gemini | mistral | disabled
+- GEMINI_API_KEY
+- MISTRAL_API_URL
+- MISTRAL_API_KEY
+- ai_restricted_channel
+- ai_restricted_role
 
-#### Faculty Data Source
-- `use_live_scraping` — Enable or disable live scraping  
-- `department_list` — Cached faculty data
-
+Faculty Data Source
+- use_live_scraping  — Enable or disable live scraping
+- department_list  — Cached faculty data
+```
 ---
 
-## Required Permissions
+## ▸ Required Permissions
 
 The bot requires the following permissions depending on enabled modules:
 
