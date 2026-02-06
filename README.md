@@ -199,8 +199,8 @@ Visualizes member seniority with dynamic rank cards and an interactive join date
 
 #### Preview
 <p align="center">
-  <img src="Assets/ReadMe/rank2.png" alt="error" width="450">
-  <img src="Assets/ReadMe/rank1.png" alt="error" width="450">
+  <img src="Assets/ReadMe/rank2.png" alt="error" width="300">
+  <img src="Assets/ReadMe/rank1.png" alt="error" width="300">
 </p>
 
 ---
