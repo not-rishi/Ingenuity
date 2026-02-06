@@ -28,6 +28,70 @@
 ## ▸ Repository Structure
 
 ```
+Ingenuity/
+├── Assets/
+│   ├── Documents/
+│   │   ├── depreciated-faculty-list.txt
+│   │   └── faculty-list.txt
+│   ├── Images/
+│   │   ├── Logo.png
+│   │   └── Welcome-Background.png
+│   ├── Loading GIFs/
+│   │   ├── Announcement-Wait.gif
+│   │   ├── Default-Load.gif
+│   │   ├── Email-Sent.gif
+│   │   ├── Routine-Check.gif
+│   │   └── Welcome-DM.gif
+│   └── ReadMe/
+│       ├── ai1.png
+│       ├── Announce1.png
+│       ├── buttonRole.png
+│       ├── daily.png
+│       ├── faculty1.png
+│       ├── faculty2.png
+│       ├── help.png
+│       ├── overview.png
+│       ├── ping1.png
+│       ├── raid1.png
+│       ├── rank1.png
+│       ├── rank2.png
+│       ├── reddit1.png
+│       ├── snipe1.png
+│       ├── statusreport1.png
+│       ├── verify1.png
+│       ├── WelcomePage.png
+│       ├── WelcomePage2.png
+│       └── WelcomePage3.png
+├── Cogs/
+│   ├── ai-replies.py
+│   ├── announce.py
+│   ├── click-roles.py
+│   ├── daily-logs.py
+│   ├── dmAll-delete.py
+│   ├── faculty-fetch.py
+│   ├── get-help-info.py
+│   ├── get-overview.py
+│   ├── join-dm.py
+│   ├── mute.py
+│   ├── ping.py
+│   ├── raid.py
+│   ├── reddit-sync.py
+│   ├── routine-check.py
+│   ├── server-join-rank.py
+│   ├── snipe.py
+│   ├── update-refresh-token.py
+│   ├── verify.py
+│   ├── websearch.py
+│   └── welcome-banner.py
+├── Helpers/
+│   ├── email-otp.py
+│   └── time-parser.py
+├── app.py
+├── datastore.py
+├── Procfile
+├── README.md
+├── requirements.txt
+└── runtime.txt
 
 ```
 ## ▸ Functions 
