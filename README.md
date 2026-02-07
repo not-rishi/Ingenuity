@@ -24,6 +24,8 @@
   Scalability-wise, it leverages a cog-based architecture and also integrates a lightweight Flask service for uptime and health monitoring.
 </p>
 
+[✦ Check Bot status](https://stats.uptimerobot.com/U670JZj3xG)
+
 ---
 
 ## ▸ Repository Structure
