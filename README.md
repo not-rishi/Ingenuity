@@ -94,6 +94,7 @@ Ingenuity/
 ├── datastore.py
 ├── Procfile
 ├── README.md
+├── LICENSE
 ├── requirements.txt
 └── runtime.txt
 
