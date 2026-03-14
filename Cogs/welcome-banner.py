@@ -8,8 +8,8 @@ from io import BytesIO
 CANVAS_WIDTH = 800
 CANVAS_HEIGHT = 300
 PROFILE_SIZE = 150
-FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-BACKGROUND_PATH = "../Assets/Images/Welcome-Background.png"
+FONT_PATH = "data/starry_font.ttf"
+BACKGROUND_PATH = "data/background2.png"
 
 WELCOME_CHANNEL_ID = 1281127167387762693
 
@@ -17,52 +17,113 @@ class WelcomeMessagePIL(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+    # def generate_welcome_image( self,user_image_url, username, background_path, join_rank):
+    #     background = Image.open(background_path).convert("RGBA")
+    #     if background.size != (CANVAS_WIDTH, CANVAS_HEIGHT):
+    #         background = background.resize((CANVAS_WIDTH, CANVAS_HEIGHT))
+
+    #     draw = ImageDraw.Draw(background)
+
+    #     try:
+    #         response = requests.get(user_image_url)
+    #         avatar = Image.open(BytesIO(response.content)).convert("RGBA")
+    #     except Exception as e:
+    #         print("Failed to load user image:", e)
+    #         return
+
+    #     avatar = avatar.resize((PROFILE_SIZE, PROFILE_SIZE))
+    #     mask = Image.new("L", (PROFILE_SIZE, PROFILE_SIZE), 0)
+    #     mask_draw = ImageDraw.Draw(mask)
+    #     mask_draw.ellipse((0, 0, PROFILE_SIZE, PROFILE_SIZE), fill=255)
+    #     avatar.putalpha(mask)
+
+    #     avatar_pos = (50, (CANVAS_HEIGHT - PROFILE_SIZE) // 2)
+    #     background.paste(avatar, avatar_pos, avatar)
+
+    #     try:
+    #         font_large = ImageFont.truetype(FONT_PATH, 25)
+    #         font_small = ImageFont.truetype(FONT_PATH, 30)
+    #         font_rank = ImageFont.truetype(FONT_PATH,10)
+    #     except IOError:
+    #         print("Font not found. Check FONT_PATH.")
+    #         return
+
+    #     welcome_text = "Welcome to the Server"
+    #     if len(username) > 22:
+    #         username = username[:21] + "..."
+    #     username_text = username
+
+    #     join_rank_text = f"Member Code : {join_rank}"
+    #     text_color = (208, 205, 205, 255)
+
+    #     draw.text((230, 115), welcome_text, font=font_small, fill=text_color)
+    #     draw.text((230, 160), username_text, font=font_large, fill=text_color)
+    #     draw.text((5, 285), join_rank_text, font=font_rank, fill=text_color)
+    #     buffer = BytesIO()
+    #     background.save(buffer, format="PNG")
+    #     buffer.seek(0)
+    #     buffer
+    #     return buffer
+
+    
     def generate_welcome_image( self,user_image_url, username, background_path, join_rank):
         background = Image.open(background_path).convert("RGBA")
+
         if background.size != (CANVAS_WIDTH, CANVAS_HEIGHT):
             background = background.resize((CANVAS_WIDTH, CANVAS_HEIGHT))
 
         draw = ImageDraw.Draw(background)
 
+        # Download avatar
         try:
             response = requests.get(user_image_url)
             avatar = Image.open(BytesIO(response.content)).convert("RGBA")
         except Exception as e:
             print("Failed to load user image:", e)
-            return
+            return None
 
+        # Apply grayscale blend
+        gray_avatar = avatar.convert("L").convert("RGBA")
+        avatar = Image.blend(avatar, gray_avatar, 0.7)
         avatar = avatar.resize((PROFILE_SIZE, PROFILE_SIZE))
+
+        # Circular mask
         mask = Image.new("L", (PROFILE_SIZE, PROFILE_SIZE), 0)
         mask_draw = ImageDraw.Draw(mask)
         mask_draw.ellipse((0, 0, PROFILE_SIZE, PROFILE_SIZE), fill=255)
         avatar.putalpha(mask)
 
-        avatar_pos = (50, (CANVAS_HEIGHT - PROFILE_SIZE) // 2)
+        avatar_pos = (115, (CANVAS_HEIGHT - PROFILE_SIZE) // 2 + 55)
         background.paste(avatar, avatar_pos, avatar)
 
+        # Fonts
         try:
-            font_large = ImageFont.truetype(FONT_PATH, 25)
-            font_small = ImageFont.truetype(FONT_PATH, 30)
-            font_rank = ImageFont.truetype(FONT_PATH,10)
+            font_large = ImageFont.truetype(FONT_PATH, 35)
+            font_small = ImageFont.truetype(FONT_PATH, 45)
+            font_rank = ImageFont.truetype(FONT_PATH, 10)
         except IOError:
-            print("Font not found. Check FONT_PATH.")
-            return
+            print("Font not found")
+            return None
 
         welcome_text = "Welcome to the Server"
+
         if len(username) > 22:
             username = username[:21] + "..."
+
         username_text = username
-
         join_rank_text = f"Member Code : {join_rank}"
-        text_color = (208, 205, 205, 255)
 
-        draw.text((230, 115), welcome_text, font=font_small, fill=text_color)
-        draw.text((230, 160), username_text, font=font_large, fill=text_color)
-        draw.text((5, 285), join_rank_text, font=font_rank, fill=text_color)
+        text_color = (213, 213, 213, 255)
+
+        draw.text((115, 30), welcome_text, font=font_small, fill=text_color)
+        draw.text((115, 75), username_text, font=font_large, fill=text_color)
+        draw.text((710, 5), join_rank_text, font=font_rank, fill=text_color)
+
+        # Save to buffer for Discord
         buffer = BytesIO()
         background.save(buffer, format="PNG")
         buffer.seek(0)
-        buffer
+
         return buffer
 
     @app_commands.command(name="test_welcome_image", description="Sends a test welcome message image")
