@@ -8,8 +8,8 @@ from io import BytesIO
 CANVAS_WIDTH = 800
 CANVAS_HEIGHT = 300
 PROFILE_SIZE = 150
-FONT_PATH = "data/starry_font.ttf"
-BACKGROUND_PATH = "data/background2.png"
+FONT_PATH = "path/starry.ttf"
+BACKGROUND_PATH = "path/NEW-WELCOME-BACKGROUND.png"
 
 WELCOME_CHANNEL_ID = 1281127167387762693
 
