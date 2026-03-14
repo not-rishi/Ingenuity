@@ -36,9 +36,11 @@ Ingenuity/
 ├── Assets/
 │   ├── Documents/
 │   │   ├── depreciated-faculty-list.txt
-│   │   └── faculty-list.txt
+│   │   ├── faculty-list.txt
+│   │   └── starry.ttf
 │   ├── Images/
 │   │   ├── Logo.png
+│   │   ├── New-Welcome-Background.png
 │   │   └── Welcome-Background.png
 │   ├── Loading GIFs/
 │   │   ├── Announcement-Wait.gif
@@ -168,7 +170,7 @@ Delivers a polished onboarding experience with automated welcome DMs and persona
 <p align="center">
   <img src="Assets/ReadMe/WelcomePage.png" alt="error" width="500">
   <img src="Assets/ReadMe/WelcomePage3.png" alt="error" width="300">
-  <img src="Assets/ReadMe/WelcomePage2.png" alt="error" width="300">
+  <img src="Assets/ReadMe/welcome.png" alt="error" width="300">
 </p>
 
 ---
